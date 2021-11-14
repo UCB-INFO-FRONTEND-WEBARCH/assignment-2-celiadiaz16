@@ -11,6 +11,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+  const [tagsText, setTagsText ] =useState ("")
 
   //Run ONCE when the app start
   useEffect(() => {
@@ -58,6 +59,8 @@ function App() {
         setTodos={setTodos} 
         setInputText={setInputText} 
         setStatus={setStatus}
+        setTagsText={setTagsText}
+        tagsText={tagsText}
       />
       <TodoList 
         setTodos={setTodos} 

@@ -1,5 +1,6 @@
 import React, { useState, setState, Component } from 'react';
 import ToDoList from './TodoList';
+import Tags from './Tags';
 
 const Todo = ({text, todo, todos, setTodos }) => {
     //Events
@@ -27,6 +28,17 @@ const Todo = ({text, todo, todos, setTodos }) => {
                 <button onClick={deleteHandler} className="trash-btn">
                 <i className="fas fa-trash"></i>
                 </button>
+                <li>{todo.tags.map(tag => (
+                    <Tags 
+                    tag = {tag}
+                    todo = {todo}
+                    todos = {todos}
+                    setTodos = {setTodos}
+                    key = {todo.id}
+                    />
+                ))}
+
+                </li>
         </div>
     );
 }

@@ -1,18 +1,22 @@
 import React from "react"; 
 
 
-const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
+const Form = ({setInputText, todos, setTodos, inputText, setStatus, tagsText, setTagsText}) => {
   //Here I can write javascript code and function
   const inputTextHandler = (e) => {
     console.log(e.target.value);
     setInputText(e.target.value);
   };
+  const TagsTextHandler = (e) => {
+    setTagsText(e.target.value.split(","));
+  };
   const submitTodoHandler = (e) => {
     e.preventDefault();
     setTodos([
-      ...todos, { text: inputText, completed: false, id: Math.random() * 1000, isInEditMode: false, tags:[]}
+      ...todos, { text: inputText, completed: false, id: Math.random() * 1000, isInEditMode: false, tags:tagsText}
     ]);
     setInputText("");
+    setTagsText("");
   };
   const statusHandler = (e) => {
     setStatus(e.target.value);
@@ -23,6 +27,10 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
        onChange={inputTextHandler} 
        type="text" 
        className="todo-input" />
+       <input value={tagsText} 
+       onChange={TagsTextHandler} 
+       type="text" 
+       className="tags-input" />
       <button onClick={submitTodoHandler} className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
