@@ -6,7 +6,7 @@
 body {
   background-image: linear-gradient(120deg, #E6F4D7 0%, hsl(212, 97%, 75%) 100%);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
 header {
@@ -28,13 +28,13 @@ form button {
   background: white;
 }
 form button {
-  color: #9747ff;
+  color: #4365b1;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #ff6f47;
+  background: #4365b1;
   color: white;
 }
 .todo-container {
@@ -67,7 +67,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #E6F4D7;
+  background: #db3b0b;
   color: white;
   border: none;
   padding: 1rem;
@@ -75,7 +75,7 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: rgb(122, 212, 86);
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -128,7 +128,7 @@ form button:hover {
 }
 
 .tag span {
-  color: #ff6f47;
+  color: #4365b1;
   margin-left: 5px;
   cursor: pointer;
 }
@@ -153,8 +153,8 @@ select {
   overflow: hidden;
 }
 select {
-  color: #ff6f47;
-  font-family: "Poppins", sans-serif;
+  color: #4365b1;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
   width: 12rem;
 }
@@ -165,7 +165,7 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background: #4365b1;
   cursor: pointer;
   pointer-events: none;
 }
